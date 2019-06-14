@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, ActivityIndicator, TextInput, TouchableOpacity, Dimensions } from 'react-native'; 
+import { View, Text, Image, ActivityIndicator, TextInput, TouchableOpacity } from 'react-native';
 import { FlatGrid } from 'react-native-super-grid';
 import { Button } from "native-base";
 import Modal from "react-native-modal";
@@ -8,10 +8,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import styles from "../styles/GalleryStyles"; // Import your styles
 import * as ReduxActions from '../redux/actions'; //Import your actions
-
-export const deviceWidth = Dimensions.get("window").width;
-export const deviceHeight = Dimensions.get("window").height;
-export const responsiveFontSize = deviceHeight / 40;
 
 class GalleryComponent extends Component {
 
@@ -47,12 +43,12 @@ class GalleryComponent extends Component {
     })
   }
 
-  // _resizeImage = async (image) => {
-  //   let resizedImage = await ImageManipulator.manipulateAsync(
-  //     image, [{ resize: { width: 1200 } }],
-  //     { compress: 1, format: "jpg", base64: false });
-  //   return resizedImage;
-  // }
+  _resizeImage = async (image) => {
+    let resizedImage = await ImageManipulator.manipulateAsync(
+      image, [{ resize: { width: 1200 } }],
+      { compress: 1, format: "jpg", base64: false });
+    return resizedImage;
+  }
 
   render() {
 
