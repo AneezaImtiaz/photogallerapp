@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "PhotoGalleryApp",
+    "slug": "PhotoGalleryApp",
+    "privacy": "public",
+    "sdkVersion": "33.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/PhotoGallery-Icon.png",
+    "splash": {
+      "image": "./assets/PhotoGallery-Icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "enabled": false
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.photoGallery"
+    },
+    "android": {
+      "package": "com.photoGallery"
+    }
+  }
+}
