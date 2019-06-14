@@ -1,5 +1,5 @@
 const mode = {
-	developement: "http://192.168.56.1:3000/",
+	developement: "http://localhost:3000/",
 };
 
 let baseURL = mode.developement;
